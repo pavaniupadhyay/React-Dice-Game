@@ -1,0 +1,29 @@
+import React, { useState } from 'react'
+import styled from 'styled-components'
+
+const RoleDice = ({currntdice,roledice}) => {
+
+
+  return (
+    <DiceContainer>
+    <div className="dice" onClick={roledice}>
+      <img src={`/image/dice/dice_${currntdice}.png`} alt="dice 1" />
+    </div>
+    <p>Click on Dice to roll</p>
+  </DiceContainer>
+);
+};
+export default RoleDice
+const DiceContainer=styled.div`
+display: flex;
+align-items: center;
+flex-direction: column;
+margin-top: 48px;
+.dice{
+  cursor: pointer;
+}
+.p{
+  font-size: 24px;
+
+}
+`;
